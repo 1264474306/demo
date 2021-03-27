@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body {
+            position: absolute;
+            width: 100vw;
+            margin: 0;
+            background: url("./data/background.png") no-repeat;
+            overflow: hidden;
+        }
+
+        #contain {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #mapChina {
+            position: absolute;
+            left: 30%;
+            top: 15%;
+            height: 64%;
+            width: 38%;
+
+        }
+
+        #pie {
+            position: absolute;
+            width: 28%;
+            height: 44%;
+            left: 0px;
+            top: 55%;
+        }
+
+        #bar {
+            position: absolute;
+            width: 28%;
+            height: 44%;
+            left: 0px;
+            top: 10%;
+        }
+
+        #barCompare {
+            position: absolute;
+            width: 34%;
+            height: 46%;
+            right: 0px;
+            top: 53%;
+
+        }
+
+        #parallel {
+            position: absolute;
+            width: 34%;
+            height: 42%;
+            right: 0px;
+            top: 10%;
+
+        }
+
+        #header {
+            position: relative;
+            height: 5%;
+            width: 100%;
+            background: url("./data/header.png") 0 0 / 100%  no-repeat
+
+        }
+        #tit {
+            position: absolute;
+            width: 38%;
+            left: 30%;
+            top: 1%;
+            display: flex;
+            align-items:  center;
+            font-family: myfonts;
+            justify-content: center;
+            color: white;
+
+        }
+        span{
+            font-size:30px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div id="contain">
+        <div id="header">
+            <div id="tit">
+                <span>中国2010年人口分析</span>
+            </div>
+        </div>
+        <div id="mapChina"></div>
+        <div id="pie"></div>
+        <div id="bar"></div>
+        <div id="barCompare"></div>
+        <div id="parallel"></div>
+    </div>
+
+    <script src="./lib/echarts.js"></script>
+    <script src="./lib/china.js"></script>
+
+    <script src="./lib/d3.js"></script>
+
+    <!-- 引入左上图 -->
+    <script src="./js/bar.js"></script>
+    <!-- 引入中国地图和扇形图 -->
+    <script src="./js/map.js"></script>
+    <!-- 引入右下图 -->
+    <script src="./js/barCompare.js"></script>
+    <script src="./js/parallel.js"></script>
+</body>
+
+</html>
